@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./src/main.css">
     <!-- ---font-family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./assets/donate 1.png" type="image/x-icon">
 </head>
 <body>
-
+    <!-- header  -->
     <header class="bg-background p-6 sticky top-0">
         <nav class="container mx-auto flex justify-between items-center">
             <div> <a class="btn-main " href="#">Blog</a> </div>
@@ -26,13 +27,42 @@
         
             </div>
         </nav>
-
+        <!-- button  -->
         <div class="flex items-center justify-center gap-5">
             <button class="btn-main">Donate</button>
             <button class="btn-secondery">History</button>
         </div>
-    </header>
 
+    </header>
+    <!-- main  -->
+    <main class="container mx-auto">
+        <!-- box 1 -->
+        <div class="flex p-8 border-2 border-medium-gray rounded-2xl gap-8 max-w-6xl mx-auto">
+            <div class="h-full">
+                <img src="./assets/noakhali.webp" alt="">
+            </div>
+        
+            <div class="space-y-6 max-w-lg">
+                <div class="flex items-center gap-1 stat-donate px-4 py-3 max-w-24 rounded-lg bg-off-white ">
+                    <span><img src="./assets/dollar 1.png" alt="Doller"></span>
+                    <span>0</span>
+                    <span>BDT</span>
+
+                </div>
+
+                <h2 class="title">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p class="description "> The recent floods in Noakhali have caused significant damage to homes infrastructure.
+                    Your donation will help provide essential supplies and to those affected by this disaster. Every
+                    contribution, big or small, makes difference. Please join us in supporting the relief efforts and making a
+                positive impact on the lives of those in need.</p>
+
+                <div>
+                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full [&:: -webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-deep-gray font-medium	" />
+                </div>
+                <button class="btn-main">Donate Now</button>
+            </div>
+        </div>
+    </main>
     
 
 

@@ -19,11 +19,19 @@
         }
 
         .description{
-            @apply text-base font-light text-dark-gray;
+            @apply text-base font-light text-dark-gray font-medium;
+        }
+
+        .stat-space{
+            @apply flex items-center justify-center gap-1 
         }
 
         .stat{
             @apply text-dark-gray font-medium;
+        }
+
+        .stat-donate{
+            @apply text-base text-dark-gray
         }
     }
 }
