@@ -8,6 +8,9 @@
        @apply btn font-bold bg-primary hover:bg-dark-primary;
 
     }
+    .btn-secondery{
+        @apply btn rounded-lg border-light-gray text-dark-gray bg-transparent hover:bg-dark-primary  outline-none hover:border-light-gray
+    }
 
     @layer utilities{
         .title{
