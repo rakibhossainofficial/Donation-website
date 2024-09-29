@@ -12,32 +12,39 @@
 </head>
 <body>
     <!-- header  -->
-    <header class="bg-background p-6 sticky top-0">
-        <nav class="container mx-auto flex justify-between items-center">
-            <div> <a class="btn-main " href="#">Blog</a> </div>
+    <header class="bg-background  p-6 sticky top-0">
+        <!-- navigation -->
+
+        <nav class="container mx-auto py-6 flex items-center justify-between gap-4 flex-col lg:flex-row ">
+            <div class=""> 
+                <a class="btn-main  " href="#">Blog</a> 
+            </div>
 
             <div class="flex justify-center items-center gap-2 title !font-semibold "> <span><img src="./assets/donate 1.png"
                 alt="donate"></span>Donate Bangladesh 
             </div>
             
-            <div class="flex justify-center items-center"> <span><img src="./assets/dollar 1.png" alt="Doller"></span>
+            <div class="flex justify-center items-center  "> <span><img src="./assets/dollar 1.png" alt="Doller"></span>
                 <p class="stat flex items-center justify-center gap-1 px-1 !text-xl ">
                     <span>5500</span>BDT
                 </p>
         
             </div>
+        
         </nav>
+
         <!-- button  -->
-        <div class="flex items-center justify-center gap-5">
+        <div class="stat-space !gap-5 ">
             <button class="btn-main">Donate</button>
             <button class="btn-secondery">History</button>
         </div>
-
     </header>
+
+
     <!-- main  -->
     <main class="container mx-auto">
         <!-- box 1 -->
-        <div class="flex p-8 border-2 border-medium-gray rounded-2xl gap-8 max-w-6xl mx-auto">
+        <div class="flex p-8 border-2 border-medium-gray rounded-2xl  gap-8 flex-col lg:flex-row max-w-6xl mx-auto ">
             <div class="h-full">
                 <img src="./assets/noakhali.webp" alt="">
             </div>
@@ -57,7 +64,7 @@
                 positive impact on the lives of those in need.</p>
 
                 <div>
-                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full [&:: -webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-deep-gray font-medium	" />
+                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full [&:: -webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-deep-gray font-medium" /> 
                 </div>
                 <button class="btn-main">Donate Now</button>
             </div>

@@ -5,33 +5,36 @@
 
 @layer components {
     .btn-main{
-       @apply btn font-bold bg-primary hover:bg-dark-primary;
+       @apply btn font-bold bg-primary text-deep-black hover:bg-dark-primary transition-colors duration-300 ;
 
     }
     .btn-secondery{
-        @apply btn rounded-lg border-light-gray text-dark-gray bg-transparent hover:bg-dark-primary  outline-none hover:border-light-gray
+        @apply btn rounded-lg border-light-gray text-dark-gray bg-transparent hover:bg-dark-primary  outline-none hover:border-light-gray transition-colors duration-300
     }
 
-    @layer utilities{
-        .title{
-            @apply text-xl font-bold text-deep-black;
-            
-        }
 
-        .description{
-            @apply text-base font-light text-dark-gray font-medium;
-        }
+}
 
-        .stat-space{
-            @apply flex items-center justify-center gap-1 
-        }
+@layer utilities {
+    .title {
+        @apply text-xl font-bold text-deep-black;
 
-        .stat{
-            @apply text-dark-gray font-medium;
-        }
-
-        .stat-donate{
-            @apply text-base text-dark-gray
-        }
     }
+
+    .description {
+        @apply text-base font-light text-dark-gray font-medium;
+    }
+
+    .stat-space {
+        @apply flex items-center justify-center gap-2
+    }
+
+    .stat {
+        @apply text-dark-gray font-medium;
+    }
+
+    .stat-donate {
+        @apply text-base text-dark-gray
+    }
+
 }
