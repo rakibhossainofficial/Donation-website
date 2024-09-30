@@ -1841,6 +1841,11 @@ html {
   width: 100%;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-24 {
   max-width: 6rem;
 }
