@@ -110,7 +110,8 @@
     "yaml": "^2.5.1"
   },
   "scripts": {
-    "dev": "vite"
+
+    "dev" : "npx tailwindcss -i ./src/main.css -o ./src/output.css --watch"
   },
   "author": "",
   "license": "ISC",
