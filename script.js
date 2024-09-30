@@ -1,3 +1,4 @@
+// faq
 document.querySelectorAll('.question').forEach((question) => {
     question.addEventListener('click', () => {
       const answer = question.nextElementSibling;
@@ -15,4 +16,34 @@ document.querySelectorAll('.question').forEach((question) => {
       }
     });
 });
+
+
+
+
+
+
+
+// utilities function 
+function getInputNumById(id) {
+  return Number(document.getElementById(id).value);
+}
+
+function getElementNumById(id) {
+  return Number(document.getElementById(id).innerText);
+}
+
+
+let money = getElementNumById("money")
+
+
+document.getElementById("noakhali-btn").addEventListener("click", ()=>{
+  const inputValue = getInputNumById("noakhali-input")
+
+  const donate = money - inputValue
+  console.log(donate);
+  document.getElementById("total-donate").innerText = inputValue;
+  document.getElementById("money").innerText = donate;
+
   
+})
+

@@ -17,7 +17,7 @@
 
         <nav class="container mx-auto py-6 flex items-center justify-between gap-4 flex-col lg:flex-row ">
             <div class=""> 
-                <a class="btn-main  " href="./src/blog.html">Blog</a> 
+                <a class="btn-main" href="./public/blog.html">Blog</a> 
             </div>
 
             <div class="flex justify-center items-center gap-2 title !font-semibold "> <span><img src="./assets/donate 1.png"
@@ -26,7 +26,7 @@
             
             <div class="flex justify-center items-center  "> <span><img src="./assets/dollar 1.png" alt="Doller"></span>
                 <p class="stat flex items-center justify-center gap-1 px-1 !text-xl ">
-                    <span>5500</span>BDT
+                    <span id="money">5500</span>BDT
                 </p>
         
             </div>
@@ -50,9 +50,9 @@
             </div>
         
             <div class="space-y-6 max-w-lg">
-                <div class="flex items-center gap-1 stat-donate px-4 py-3 max-w-24 rounded-lg bg-off-white ">
+                <div class="flex items-center stat-donate px-4 py-3 max-w-24 rounded-lg bg-off-white ">
                     <span><img src="./assets/dollar 1.png" alt="Doller"></span>
-                    <span>0</span>
+                    <span id="total-donate">460</span>
                     <span>BDT</span>
 
                 </div>
@@ -64,9 +64,9 @@
                 positive impact on the lives of those in need.</p>
 
                 <div>
-                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full [&:: -webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-deep-gray font-medium" /> 
+                    <input id="noakhali-input" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full [&:: -webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-deep-gray font-medium" /> 
                 </div>
-                <button class="btn-main">Donate Now</button>
+                <button id="noakhali-btn" class="btn-main">Donate Now</button>
             </div>
         </div>
         <!-- box 2 -->
@@ -123,15 +123,16 @@
         </div>
 
         <!-- History container -->
-         <div class="space-y-8 border hidden p-8 m-4">
+        <div class="space-y-8 border hidden p-8 m-4">
             <!-- Demo -->
              <div class="box space-y-4 flex items-center justify-center flex-col">
                 <h2 class="title ">96500 Taka is Donate for famine-2024 at Feni, Bangladesh</h2>
                 <p class="description"> Date : Tue Sep 17 2024 08:38:11 GMT +0600 (Bangladesh Standard Timg)</p>
              </div>
-         </div>
+        </div>
     </main>
-    
+
+    <!-- footer  -->
     <footer class="h-24 flex items-center justify-center bg-background text-deep-black text-xl font-bold	uppercase">
         <h3>I am a footer</h3>
     </footer>
