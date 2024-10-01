@@ -1,24 +1,30 @@
-// faq
+// faq-section
 document.querySelectorAll('.question').forEach((question) => {
-    question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
-      const icon = question.querySelector('[data-icon]');
-  
-      // Check if the answer is currently expanded
-      if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-        // Collapse the answer
-        answer.style.maxHeight = '0';
-        icon.classList.remove('rotate-180');
-      } else {
-        // Expand the answer
-        answer.style.maxHeight = `${answer.scrollHeight}px`;
-        icon.classList.add('rotate-180');
-      }
-    });
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const icon = question.querySelector('[data-icon]');
+
+    // Toggle the 'active' class to expand/collapse the answer
+    answer.classList.toggle('active');
+
+    // Adjust max-height to expand/collapse answer
+    if (answer.classList.contains('active')) {
+      answer.style.maxHeight = `${answer.scrollHeight}px`;
+    } else {
+      answer.style.maxHeight = '0';
+    }
+
+    // Toggle the rotation class for the icon
+    icon.classList.toggle('rotate-180');
+  });
 });
 
-
-
+document.querySelectorAll('[data-icon]').forEach((icon) => {
+  icon.addEventListener('click', () => {
+    // Toggle the rotation class for the icon
+    icon.classList.toggle('rotate-180');
+  });
+});
 
 
 // utilities function 
@@ -44,13 +50,10 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
   document.getElementById("noakhali-input").value = "";   //for reamove input value
 });
 
-
-
 //propper validation
-
 document.getElementById("noakhali-input").addEventListener("input", () => {
   const value = getInputNumById("noakhali-input");
-  if (isNaN(value) || value < 0) {
+  if (isNaN(value) || value < 0 || value > money) {
     const errorMsg = document.getElementById("noakhali-error");
     errorMsg.classList.remove("hidden")
     const button = document.getElementById("noakhali-btn");
@@ -62,3 +65,4 @@ document.getElementById("noakhali-input").addEventListener("input", () => {
     button.removeAttribute("disabled");
   }
 })
+
