@@ -40,6 +40,25 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
   document.getElementById("total-donate").innerHTML = totalDonate;
 
   document.getElementById("money").innerText = money;
-  
+
   document.getElementById("noakhali-input").value = "";   //for reamove input value
+});
+
+
+
+//propper validation
+
+document.getElementById("noakhali-input").addEventListener("input", () => {
+  const value = getInputNumById("noakhali-input");
+  if (isNaN(value) || value < 0) {
+    const errorMsg = document.getElementById("noakhali-error");
+    errorMsg.classList.remove("hidden")
+    const button = document.getElementById("noakhali-btn");
+    button.setAttribute("disabled", true);
+  } else{
+    const errorMsg = document.getElementById("noakhali-error");
+    errorMsg.classList.add("hidden")
+    const button = document.getElementById("noakhali-btn");
+    button.removeAttribute("disabled");
+  }
 })
