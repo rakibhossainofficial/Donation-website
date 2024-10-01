@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @layer components {
     .btn-main{
        @apply btn font-bold bg-primary text-deep-black hover:bg-dark-primary transition-colors duration-300 ;

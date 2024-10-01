@@ -19,25 +19,27 @@ document.querySelectorAll('.question').forEach((question) => {
 
 
 
+
+
 // utilities function 
 function getInputNumById(id) {
-  return Number(document.getElementById(id).value);
+  return Number(document.getElementById(id).value); //for convert string to number
 }
-
 function getElementNumById(id) {
-  return Number(document.getElementById(id).innerText);
+  return Number(document.getElementById(id).innerText);  //for convert string to number
 }
 
 // main functionality
 let money = getElementNumById("money")
-
+let totalDonate = getElementNumById("total-donate");
 document.getElementById("noakhali-btn").addEventListener("click", ()=>{
   const inputValue = getInputNumById("noakhali-input")
+  money -= inputValue;
 
-  const donate = money - inputValue
-  console.log(donate);
-  document.getElementById("total-donate").innerText = inputValue;
-  document.getElementById("money").innerText = donate;
+  totalDonate += inputValue;
+  document.getElementById("total-donate").innerHTML = totalDonate;
+
+  document.getElementById("money").innerText = money;
+  
   document.getElementById("noakhali-input").value = "";   //for reamove input value
 })
-
