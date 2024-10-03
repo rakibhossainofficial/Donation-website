@@ -19,21 +19,27 @@ document.querySelectorAll('.question').forEach((question) => {
   });
 });
 
-document.querySelectorAll('[data-icon]').forEach((icon) => {
-  icon.addEventListener('click', () => {
-    // Toggle the rotation class for the icon
-    icon.classList.toggle('rotate-180');
-  });
-});
 
 
 // utilities function 
 function getInputNumById(id) {
-  return Number(document.getElementById(id).value); //for convert string to number
+  return parseFloat(document.getElementById(id).value); //for convert string to number
 }
 function getElementNumById(id) {
-  return Number(document.getElementById(id).innerText);  //for convert string to number
+  return parseFloat(document.getElementById(id).innerText); //for convert string to number
 }
+
+//propper validation function
+function errorAlert(id, errorText, btn) {
+  const value = getInputNumById(id)
+  if (isNaN(value) || value < 0 || value > money) {
+      document.getElementById(errorText).classList.remove("hidden")
+      document.getElementById(btn).setAttribute("disabled" , true)
+  } else {
+    document.getElementById(errorText).classList.add("hidden")
+    document.getElementById(btn).removeAttribute("disabled")
+  };
+};
 
 // main functionality
 let money = getElementNumById("money")
@@ -52,17 +58,6 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
 
 //propper validation
 document.getElementById("noakhali-input").addEventListener("input", () => {
-  const value = getInputNumById("noakhali-input");
-  if (isNaN(value) || value < 0 || value > money) {
-    const errorMsg = document.getElementById("noakhali-error");
-    errorMsg.classList.remove("hidden")
-    const button = document.getElementById("noakhali-btn");
-    button.setAttribute("disabled", true);
-  } else{
-    const errorMsg = document.getElementById("noakhali-error");
-    errorMsg.classList.add("hidden")
-    const button = document.getElementById("noakhali-btn");
-    button.removeAttribute("disabled");
-  }
-})
+  errorAlert("noakhali-input", "noakhali-error", "noakhali-btn");
+});
 
