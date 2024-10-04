@@ -29,7 +29,7 @@ function getElementNumById(id) {
   return parseFloat(document.getElementById(id).innerText); //for convert string to number
 }
 
-//propper validation function
+//propper validation function,error!
 function errorAlert(id, errorText, btn) {
   const value = getInputNumById(id)
   if (isNaN(value) || value < 0 || value > money) {
@@ -40,6 +40,15 @@ function errorAlert(id, errorText, btn) {
     document.getElementById(btn).removeAttribute("disabled")
   };
 };
+
+// History tab  function 
+function btnToggle(mainBtn, shiftBtn) {
+  document.getElementById(shiftBtn).classList.remove("btn-main")
+  document.getElementById(shiftBtn).classList.add("btn-secondery")
+  document.getElementById(mainBtn).classList.add("btn-main")
+  document.getElementById(mainBtn).classList.remove("btn-secondery")
+  
+}
 
 // main functionality
 let money = getElementNumById("money")
@@ -60,4 +69,18 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
 document.getElementById("noakhali-input").addEventListener("input", () => {
   errorAlert("noakhali-input", "noakhali-error", "noakhali-btn");
 });
+
+
+// History button toggle
+document.getElementById("history-tab").addEventListener("click", () => {
+  btnToggle("history-tab","donation-tab")
+  document.getElementById("history-container").classList.remove("hidden")
+  document.getElementById("donation-container").classList.add("hidden")
+})
+
+document.getElementById("donation-tab").addEventListener("click", () => {
+  btnToggle("donation-tab","history-tab")
+  document.getElementById("history-container").classList.add("hidden")
+  document.getElementById("donation-container").classList.remove("hidden")
+})
 

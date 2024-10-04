@@ -35,13 +35,14 @@
 
         <!-- button  -->
         <div class="stat-space !gap-5 ">
-            <button class="btn-main">Donate</button>
-            <button class="btn-secondery">History</button>
+            <button id="donation-tab" class="btn-main">Donate</button>
+            <button id="history-tab" class="btn-secondery">History</button>
         </div>
     </header>
 
     <!-- main  -->
-    <main class="container mx-auto ">
+    <main  class="container mx-auto ">
+        <div id="donation-container" class="box-container">
         <!-- box 1 -->
         <div class="flex p-8 border-2 border-medium-gray rounded-2xl  gap-8 flex-col lg:flex-row max-w-6xl mx-auto mb-6 ">
             <div class="h-full">
@@ -87,7 +88,6 @@
 
             </div>
         </div>
-
         <!-- box 2 -->
         <div class="flex p-8 border-2 border-medium-gray rounded-2xl  gap-8 flex-col lg:flex-row max-w-6xl mx-auto mb-6 ">
             <div class="h-full">
@@ -140,14 +140,14 @@
                 <button class="btn-main">Donate Now</button>
             </div>
         </div>
-
+        </div>
         <!-- History container -->
-        <div class="space-y-8 border hidden p-8 m-4">
+        <div id="history-container" class="space-y-8 border hidden p-8 m-4">
             <!-- Demo -->
-             <div class="box space-y-4 flex items-center justify-center flex-col">
+            <div class="box space-y-4 flex items-center justify-center flex-col">
                 <h2 class="title ">96500 Taka is Donate for famine-2024 at Feni, Bangladesh</h2>
                 <p class="description"> Date : Tue Sep 17 2024 08:38:11 GMT +0600 (Bangladesh Standard Timg)</p>
-             </div>
+            </div>
         </div>
     </main>
 
