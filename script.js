@@ -59,10 +59,17 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
 
   totalDonate += inputValue;
   document.getElementById("total-donate").innerHTML = totalDonate;
-
+    
   document.getElementById("money").innerText = money;
 
   document.getElementById("noakhali-input").value = "";   //for reamove input value
+
+  const creatEl = document.createElement("div");
+  creatEl.innerHTML = `
+    <h2 class="title "> ${inputValue} Taka is  ${document.getElementById("noakhali-title").innerText} </h2>
+    <p class="description"> Date : ${new Date().toLocaleDateString()}</p>
+  `
+  document.getElementById("history-container").append(creatEl);
 });
 
 //propper validation
