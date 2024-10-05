@@ -54,6 +54,7 @@ function btnToggle(mainBtn, shiftBtn) {
 let money = getElementNumById("money")
 let totalDonate = getElementNumById("total-donate");
 document.getElementById("noakhali-btn").addEventListener("click", ()=>{
+ 
   const inputValue = getInputNumById("noakhali-input")
   money -= inputValue;
 
@@ -70,6 +71,13 @@ document.getElementById("noakhali-btn").addEventListener("click", ()=>{
     <p class="description"> Date : ${new Date().toLocaleDateString()}</p>
   `
   document.getElementById("history-container").append(creatEl);
+
+  if (isNaN(inputValue)) {
+    alert("Please  Enter amount in input field")
+    return
+  }
+
+
 });
 
 //propper validation
